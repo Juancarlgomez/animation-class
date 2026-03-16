@@ -1,16 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
+    user-select: none;
 }
 
 body {
     background-color: black;
+    color: white;
+    font-family: 'Belanosima', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h3 {
+    text-align: center;
+    margin:10px 0 50px 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0 0 20px 0;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
+    margin: 0 30px;
+    height: 60vh;
+}
+
+.card {
+    position: relative;
+    cursor: pointer;
+
+    & img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -2;
+    }
+
+    &::before {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+        background:rgba(8, 0, 255, 1);
+    }
 }
