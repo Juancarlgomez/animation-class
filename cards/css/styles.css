@@ -42,6 +42,10 @@ p {
     position: relative;
     cursor: pointer;
 
+    & p, & h3 {
+        opacity: 0;
+    }
+
     & img {
         position: absolute;
         inset: 0;
@@ -64,5 +68,8 @@ p {
 
     &:hover{
         background:rgba(255, 119, 0, 0.4);
+        & p, & h3 {
+            opacity: 1;
+        }
     }
 }
