@@ -36,9 +36,9 @@ p {
 
 .container {
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    margin: 0 30px;
+    margin: 0 12rem;
     height: 60vh;
 }
 
@@ -53,6 +53,7 @@ p {
     border-radius: 10px;
     transition: all 500ms ease-out;
     overflow: hidden;
+    max-width: 300px;
 
     h3 {
         transition: text-decoration 600ms ease-out 400ms,
