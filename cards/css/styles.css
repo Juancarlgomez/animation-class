@@ -71,10 +71,6 @@ p {
         bottom: -100px;
     }
 
-    & p, & h3 {
-        opacity: 0;
-    }
-
     & img {
         position: absolute;
         /* inset: 0; prevents from centering the image */
@@ -111,11 +107,7 @@ p {
         & h3 {
             top: 0;
             text-decoration: underline solid white 3px;
-            text-underline-offset: 5px;
-        }
-
-        & p, & h3 {
-            opacity: 1;
+            text-underline-offset: 6px;
         }
     }
 }
