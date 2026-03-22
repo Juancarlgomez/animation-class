@@ -51,13 +51,9 @@ p {
     align-items: center;
     border: 10px solid white;
     border-radius: 10px;
-    transition: all 500ms ease-out;
+    transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
     max-width: 300px;
-
-    &:nth-child(odd){    
-        margin: 0 2rem;
-    }
 
     h3 {
         transition: text-decoration 600ms ease-out 400ms,
@@ -86,7 +82,7 @@ p {
         width: 100%;
         object-fit: cover;
         z-index: -2;
-        transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 400ms cubic-bezier(0.46, 0.16, 0, 1.06);
     }
 
     &::before {
@@ -122,4 +118,17 @@ p {
             opacity: 1;
         }
     }
+}
+
+@media (max-width: 1350px) {
+    .container {
+        grid-template-columns: 1fr;
+        margin: 0 2rem;
+    }
+
+    .card {
+        margin: 2rem 0;
+        height: 60vh;
+    }
+    
 }
