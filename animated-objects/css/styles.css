@@ -76,6 +76,41 @@ body {
     transform: rotate(45deg);
 }
 
+.icon-artboard-2 {
+    animation: glide 2s normal infinite;
+}
+
+.balloon {
+    width: 200px;
+    height: 200px;
+    background-color: hsl(210, 50%, 50%);
+    border-radius: 60% 40% 60% 40%;
+    border-left: pink solid 5px;
+    box-shadow: 0 0 20px hsl(210, 50%, 50%);
+}
+
+.balloon-string {
+    z-index: -1;
+    position: absolute;
+    left: 55%;
+    bottom: 90%;
+    border: .5rem solid pink;
+    border-color: pink pink pink transparent;
+    border-radius: 50% 50% 50% 50%;
+    width: 30%;
+    height: 70%;
+}
+
+.balloon-neck {
+    position: absolute;
+    left: 63%;
+    border: 1.5rem solid pink;
+    border-color: hsl(210, 50%, 50%) transparent transparent transparent;
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(26deg);
+    bottom: 83%;
+}
+
 @keyframes swim {
 
     0% {
@@ -86,6 +121,21 @@ body {
     }
     100% {
         transform: rotate(45deg) translateX(0) translateY(0);
+    }
+
+}
+
+@keyframes glide {
+    /* glide from left to right and back */
+
+    0% {
+        transform: rotate(133deg) translateX(0) translateY(0);
+    }
+    50% {
+        transform: rotate(145deg) translateX(38px) translateY(40px);
+    }
+    100% {
+        transform: rotate(133deg) translateX(0) translateY(0);
     }
 
 }
