@@ -18,7 +18,7 @@ body {
     place-items: center;
 }
 
-.artboard-1 {
+.artboard {
     position: relative;
 }
 
@@ -35,8 +35,8 @@ body {
 .eye {
     position: absolute;
     background: black;
-    width: 50px;
-    height: 50px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     top: 14%;
     left: 68%;
@@ -46,8 +46,8 @@ body {
 .pupil {
     position: absolute;
     background: white;
-    width: 10px;
-    height: 10px;
+    width: .7rem;
+    height: .7rem;
     border-radius: 50%;
     top: 60%;
     left: 60%;
@@ -55,23 +55,24 @@ body {
 
 .fin {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 7rem;
+    height: 7rem;
     background-color: pink;
     border-radius: 50% 0% 50% 100%;
-    left: 32%;
-    bottom: 20%;
+    left: 26%;
+    bottom: 15%;
 }
 
 .tail {
     position: absolute;
     left: 0;
     bottom: 0;
-    border-color: transparent transparent pink transparent;
+    border-color: transparent transparent hsl(210, 50%, 50%) transparent;
     border-style: solid;
-    border-width: 100px;
-    left: -26%;
-    bottom: -28%;
+    border-width: 6rem;
+    border-radius: 100%;
+    left: -17%;
+    bottom: -20%;
     transform: rotate(45deg);
 }
 
