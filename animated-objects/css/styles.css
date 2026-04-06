@@ -138,12 +138,13 @@ body {
     overflow: hidden;
 }
 
-.wings {
+.wing {
     position: absolute;
     width: 100px;
     height: 50px;
     background-color: hsl(60, 98%, 66%);
-    border-top: pink solid 7px;
+    box-shadow: 0 0 20px hsl(60, 50%, 50%);
+    border-top: rgb(254, 255, 233) solid 7px;
     border-radius: 50% 80% 0% 80%;
     left: -18%;
     top: -25%;
