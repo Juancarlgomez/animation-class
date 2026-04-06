@@ -115,6 +115,55 @@ body {
     bottom: 82%;
 }
 
+.icon-artboard-3 {
+    width: 100%;
+    height: 100%;
+    animation: fly 3s infinite;
+
+    &>div.eye {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 30%;
+        left: 70%;
+    }
+}
+
+.bee {
+    position: relative;
+    width: 166px;
+    height: 103px;
+    background-color: hsl(60, 100%, 50%);
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: 0 0 20px hsl(60, 50%, 50%);
+    overflow: hidden;
+}
+
+.wings {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: hsl(60, 98%, 66%);
+    border-top: pink solid 7px;
+    border-radius: 50% 80% 0% 80%;
+    left: -18%;
+    top: -25%;
+    animation: flap 1s infinite;
+    transform-origin: 50% 100%;
+}
+
+.stripes {
+    width: 50%;
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(
+        to right,
+        transparent,
+        transparent 20px,
+        black 20px,
+        black 40px
+    );
+}
+
 @keyframes swim {
 
     0% {
@@ -130,7 +179,6 @@ body {
 }
 
 @keyframes glide {
-    /* glide from left to right and back */
 
     0% {
         transform: rotate(133deg) translateX(0) translateY(0);
@@ -157,6 +205,37 @@ body {
     }
     100% {
         transform: scaleX(1) rotate(5deg);
+    }
+
+}
+
+@keyframes fly {
+
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    30% {
+        transform: translateX(38px) translateY(150px);
+    }
+    60% {
+        transform: translateX(50px) translateY(170px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+}
+
+@keyframes flap {
+
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(-1);
+    }
+    100% {
+        transform: scaleY(1);
     }
 
 }
