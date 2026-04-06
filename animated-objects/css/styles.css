@@ -84,7 +84,7 @@ body {
 .balloon {
     width: 200px;
     height: 200px;
-    background-color: hsl(0, 50%, 50%);
+    background-image: radial-gradient(circle at 25% 66%, hsl(0deg 100% 74.79%), hsl(0deg 100% 50%));
     border-radius: 60% 40% 60% 40%;
     border-left: pink solid 5px;
     box-shadow: 0 0 20px hsl(0, 50%, 50%);
@@ -108,8 +108,8 @@ body {
 .balloon-neck {
     position: absolute;
     left: 63%;
-    border: 1.5rem solid pink;
-    border-color: hsl(0, 50%, 50%) transparent transparent transparent;
+    border: 1.5rem solid;
+    border-color: hsl(0, 100%, 56%) transparent transparent transparent;
     border-radius: 50% 50% 50% 50%;
     transform: rotate(26deg);
     bottom: 82%;
@@ -196,7 +196,7 @@ body {
 }
 
 @keyframes wiggle {
-    /* mirror left/right around the neck-side pivot */
+  
     0% {
         transform: scaleX(1) rotate(5deg);
     }
