@@ -14,14 +14,15 @@ async function renderSiteMap() {
     list.innerHTML = '';
 
     for (const item of links) {
-      if (item.label === 'Home' || item.url === './index.html') {
+      const url = normalizeSiteUrl(item.url);
+      if (item.label === 'Home' || url === './' || url === '') {
         continue;
       }
 
       const li = document.createElement('li');
       const a = document.createElement('a');
-      a.href = item.url;
-      a.textContent = item.label || item.url;
+      a.href = url;
+      a.textContent = item.label || pageNameFromUrl(url);
       li.appendChild(a);
       list.appendChild(li);
     }
@@ -29,6 +30,20 @@ async function renderSiteMap() {
     list.innerHTML = '<li>Unable to load links. Run `node sitemap.js` to regenerate site-links.json.</li>';
     console.error(error);
   }
+}
+
+function normalizeSiteUrl(url) {
+  if (!url) {
+    return '';
+  }
+
+  return url.replace(/index\.html$/i, '');
+}
+
+function pageNameFromUrl(url) {
+  const cleaned = normalizeSiteUrl(url).replace(/\/$/, '');
+  const segments = cleaned.split('/').filter(Boolean);
+  return segments[segments.length - 1] || 'Page';
 }
 
 document.addEventListener('DOMContentLoaded', renderSiteMap);

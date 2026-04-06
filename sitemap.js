@@ -24,8 +24,10 @@ async function createSitemap(startDir) {
           continue;
         }
 
+        const cleanRel = rel.replace(/index\.html$/i, '');
+
         results.push({
-          url: './' + rel,
+          url: './' + cleanRel,
           label: labelFromRelativePath(rel)
         });
       }
