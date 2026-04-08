@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.scroll-watcher {
+    height: 1rem;
+    width: 100%;
+    background-image: linear-gradient(to right, #77c772, #aaeb08 20px, #e26a29, #176cf5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+}
+
+body {
+    display: grid;
+    grid-template: 1fr / 1fr 3fr 1fr;
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(to bottom, #1b87da, #176cf5);
+    font-family: 'Belanosima', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+h2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    text-shadow: -2px 8px 10px #211717;
+    margin: 2rem 0;
+}
+
+img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1rem solid white;
+    box-shadow: 10px 20px 20px 7px #0000008f;
+    max-width: 50rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+p {
+    margin: 1rem 0;
+    text-indent: 2rem;
+}
