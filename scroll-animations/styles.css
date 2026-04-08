@@ -9,14 +9,17 @@
 }
 
 .scroll-watcher {
-    height: 1rem;
+    height: .5rem;
     width: 100%;
-    background-image: linear-gradient(to right, #77c772, #aaeb08 20px, #e26a29, #176cf5);
+    background-image: linear-gradient(to right, #77c772, #aaeb08 20px, #e26a29, #af17f5);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
-
+    scale: 0 1;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+    transform-origin: left;
 }
 
 body {
@@ -59,4 +62,10 @@ img {
 p {
     margin: 1rem 0;
     text-indent: 2rem;
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
 }
