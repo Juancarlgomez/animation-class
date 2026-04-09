@@ -71,6 +71,16 @@ p {
     text-indent: 2rem;
 }
 
+.hidden {
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transition: all 1s ease;
+}
+
 @keyframes scroll-watcher {
     to {
         scale: 1 1;
