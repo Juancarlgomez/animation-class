@@ -12,6 +12,7 @@
     width: 100%;
     background-image: linear-gradient(to right, #77c772, #aaeb08 20px, #e26a29, #af17f5);
     position: fixed;
+    box-shadow: 0 0 10px 5px #0000008f;
     top: 0;
     left: 0;
     z-index: 100;
