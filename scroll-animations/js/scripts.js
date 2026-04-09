@@ -15,8 +15,8 @@ const observer = new IntersectionObserver((entry) => {
         }
 
     });
-// set threshold to 0.3 so that the animation will trigger when the element is 30% visible in the viewport
-}, { threshold: 0.3 });
+    // set threshold so that the animation will trigger when the element is at a certain percentage visible in the viewport
+}, { threshold: 0.15 });
 
 // observe all elements with the class "hidden" and "h2"
 hiddenElements.forEach((el) => observer.observe(el));
